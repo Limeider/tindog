@@ -1,27 +1,46 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
-#title {
+p {
+    color: #8f8f8f;
+}
+
+.big-heading {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.5;   /* line height will be 1.5 times the font size */
+}
+
+.section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+}
+
+#title .container-fluid {
+    padding: 3% 15% 7%;
+    text-align: left;
+}
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+.colored-section {
     background-color: #ff4c68;
     color: #fff;
 }
 
-h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    line-height: 1.5;   /* line height will be 1.5 times the font size */
-    
-    
+.white-section {
+    background-color: #fff;
 }
 
-.container-fluid {
-    padding: 3% 15%;
-}
 
 .navbar {
     padding: 0 0 4.5rem 0;
-}
+} 
 
 .navbar-brand {
     font-family: 'Ubuntu';
@@ -42,25 +61,26 @@ h1 {
     margin: 8% 3% 5% 0;
 }
 
+.titleIMG-container {
+    position: relative;
+}
+
 .titleIMG {
     width: 60%;
     transform: rotate(25deg);
+    position: absolute;
+    top: -10%;
+    right: 20%;
 }
 
 #features {
-    padding: 7% 15%;
+    position: relative;
+    /* z-index: 1;  this is not necessary anymore as features section is beneath title image so it will automatically be on top of title image */
 }
 
-.feature-box {
-    text-align: center;
-}
-
-h3 {
-    font-weight: bold;
-}
-
-p {
-    color: #8f8f8f;
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .featureIMG {
@@ -73,16 +93,14 @@ p {
 }
 
 #testimonials {
-    text-align: center;
     background-color: #ef8172;
     color: #fff;
 }
 
-h2 {
-    font-family: 'Montserrat';
+.testimonial-text {
     font-size: 3rem;
-    font-weight: 600;
     line-height: 1.5;
+    font-weight: 900;
 }
 
 #testimonials img {
@@ -93,7 +111,6 @@ h2 {
 
 #press {
     padding-bottom: 3%;
-    text-align: center;
     background-color: #ef8172;
     color: #fff;
 }
@@ -103,16 +120,32 @@ h2 {
     margin: 40px 20px;
 }
 
-.carousel-item {
-    padding: 7% 15%;
-}
-
 #pricing {
     padding: 100px;
-    text-align: center;
+}
+
+.price-text {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 .pricing-column {
-    padding: 3% 2%;
-    
+    padding: 3% 2%;    
+}
+
+.fa {
+    color: #000;
+}
+
+@media (max-width:1050px) {
+
+    .titleIMG {
+        position: static;
+        transform: rotate(0);
+    }
+
+    #title {
+        text-align: center;
+    }
+
 }
